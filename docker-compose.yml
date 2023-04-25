@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  angular-mixins:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        HOST_USER_ID: ${HOST_USER_ID:-1000}
+        HOST_GROUP_ID: ${HOST_GROUP_ID:-1000}
+    ports:
+      - ${SERVER_PORT:-4200}:4200
+    volumes:
+      - ./:/app
