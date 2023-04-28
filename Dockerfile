@@ -26,4 +26,4 @@ USER ${HOST_USER_ID}:${HOST_GROUP_ID}
 # create empty config in order to avoid initial prompt
 RUN touch ~/.zshrc
 
-CMD npm install --force && ng serve --host="0.0.0.0"
+CMD npm install && ng serve --host="0.0.0.0"
